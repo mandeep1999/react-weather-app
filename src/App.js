@@ -20,7 +20,7 @@ function App() {
     setQuery(q);
   };
   useEffect(() => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${key}`;
     const getWeather = async () => {
       if (query !== '') {
         setIsLoading(true);
