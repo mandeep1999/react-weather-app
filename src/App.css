@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000 url('assets/cold-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  transition: 0.4 ease;
+  color: #fff;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+header {
+  height: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header img {
+  width: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type='text'] {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  outline-style: none;
+  box-shadow: 2px 2px rgb(73, 71, 71);
+  transition: 0.4s ease-in;
+  background-color: rgb(192, 226, 235, 0.7);
+}
+input:focus {
+  box-shadow: 3px 3px rgb(73, 71, 71);
+  transform: scale(1.05);
+  background-color: rgb(192, 226, 235, 0.9);
+}
+input:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .location {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+.location-box .date {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+.weather-box {
+  text-align: center;
+}
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  padding: 15px 25px;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: rgb(161, 216, 216);
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+}
+.weather-box .weather {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2.7rem;
   }
-  to {
-    transform: rotate(360deg);
+  .weather-box .weather {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .weather-box .weather {
+    font-size: 2rem;
   }
 }
