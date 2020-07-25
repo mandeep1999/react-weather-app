@@ -9,7 +9,7 @@ let key;
 if (process.env.NODE_ENV !== 'production') {
   key = process.env.REACT_APP_KEY;
 } else {
-  key = process.env.KEY;
+  key = process.env.API_KEY;
 }
 
 function App() {
