@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 let key;
 if (process.env.NODE_ENV !== 'production') {
-  key = process.env.REACT_APP_KEY;
+  key = process.env.REACT_APP_API_KEY;
 } else {
   key = process.env.API_KEY;
 }
